@@ -1,1 +1,1 @@
-web: gunicorn mtgauction.wsgi
+web: gunicorn Mtg_auction_master.wsgi

@@ -157,4 +157,3 @@ if os.getcwd() == '/app':
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())

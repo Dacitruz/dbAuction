@@ -1,1 +1,1 @@
-web: gunicorn cardtrash.wsgi
+web: gunicorn mtgauction.wsgi

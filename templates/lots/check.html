@@ -1,0 +1,97 @@
+{% extends 'layout/base_check.html' %}
+
+{% block title %}{{ title }}{% endblock title%}
+
+{% block content %}
+<div>
+    {% if post.life_cycle == 'EX'%}
+    <div style="width: 100%;">
+        <div class="image_check">
+            <div class="image-background">
+                <img src="/media/{{ post.image }}"  class="zoom" style="width:350px; margin-left:25px; max-width:100%; height:auto;">
+            </div>
+        </div>
+        <div class="descript">
+            <ol class="rectangle">
+                <div style="margin-left: 1%;">
+                    <li><p> {{ post.title }}  ({{ post.condition }})</p></li>
+                    <li><a href="#"> Expires: {{ post.finish_date }}</a></li>
+                    <li><a href="#"> Current Winner: {{bigb.user}}</a></li>
+                    <li><a href="#"> Starting Price: {{ post.min_price }}</a></li>
+                </div>
+            </ol>
+            <div class="bet-price">
+                <div style="margin-top:10%; margin-left:5%;">
+                    <p>CURRENT BET : {{ bigb.amount }}</p>
+                </div>
+            </div>
+            <div class="bet-form">
+                <form action="/lots/check/{{ post.id }}"  method="post" class="bet-field">
+                    {% csrf_token %}
+                    <label>
+                        <input type="text" name="bid" value="" required style="height: 40px;font-size: 20px; width:50%;">
+                    </label>
+                    <label>
+                        <button class="place_bet" type="submit" name="place_bet"><a>Place Bet</a></button>
+                    </label>
+                </form>
+            </div>
+            <div class="some-buts">
+
+            </div>
+        </div>
+        <div class="sub-check">
+              <ol class="rectangle">
+                  <div style="margin-left: 1%;">
+                      <li><p> Author: {{ post.user }}</p></li>
+                      <li><a href="#">Started: {{ post.place_date }}</a></li>
+                      <li><a href="#"> Set: {{ post.set }}</a></li>
+                      <li><a href="#"> Description: {{ post.description }}</a></li>
+                  </div>
+              </ol>
+        </div>
+    </div>
+    {% else %}
+     <div style="width: 100%;">
+        <div class="image_check">
+            <div class="image-background">
+                <img src="/media/{{ post.image }}"  class="zoom" style="width:350px; margin-left:25px; max-width:100%; height:auto;">
+            </div>
+        </div>
+        <div class="descript">
+            <ol class="rectangle">
+                <div style="margin-left: 1%;">
+                    <li><p> {{ post.title }}  ({{ post.condition }})</p></li>
+                    <li><a href="#"> Ended: {{ post.finish_date }}</a></li>
+                    <li><a href="#"> Winner: {{bigb.user}}</a></li>
+                    <li><a href="#"> Starting Price: {{ post.min_price }}</a></li>
+                </div>
+            </ol>
+            <div class="bet-price">
+                <div style="margin-top:10%; margin-left:5%;">
+                    <p>Final Price : {{ bigb.amount }}</p>
+                    <p style="color: red; font-size: 50px;"> AUCTION IS OVER </p>
+                </div>
+            </div>
+            <div class="bet-form">
+
+            </div>
+            <div class="some-buts">
+
+            </div>
+        </div>
+        <div class="sub-check">
+              <ol class="rectangle">
+                  <div style="margin-left: 1%;">
+                      <li><p> Author: {{ post.user }}</p></li>
+                      <li><a href="#">Started: {{ post.place_date }}</a></li>
+                      <li><a href="#"> Set: {{ post.set }}</a></li>
+                      <li><a href="#"> Description: {{ post.description }}</a></li>
+                  </div>
+              </ol>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock content %}

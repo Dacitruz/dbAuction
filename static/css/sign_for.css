@@ -1,0 +1,61 @@
+form {
+  border: 2px solid #EAFAF1;
+  border-radius: 2px;
+  font: 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  width: 300px;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+input {
+  border-radius: 3px;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+.account-info {
+  padding: 20px 20px 0 20px;
+  background: #F8F9F9;
+}
+.account-info label {
+  color: #395870;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.account-info input {
+  background: #fff;
+  border: 1px solid #c6c7cc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+  color: #636466;
+  padding: 6px;
+  margin-top: 6px;
+  width: 100%;
+}
+.account-action {
+  background: #EBEDEF;
+  border-top: 1px solid #c6c7cc;
+  padding: 20px;
+}
+
+.button{
+ height:40px;
+ padding:0 12px;
+ line-height:36px;
+ cursor:pointer;
+ background:#ABB2B9 ;
+ border-radius: 1px;
+ border-color: #ABB2B9;
+}
+.button a{
+  color: #fff;
+  font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.button:hover {
+  background-color: #E9F3F1;
+}
+.button:hover a{
+  color: #CD6155;
+}

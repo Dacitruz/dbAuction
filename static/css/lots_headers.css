@@ -1,0 +1,72 @@
+/* КНОПКИ В MY LOTS
+-----------------------------------------------------------------------------*/
+.add-lots{
+  margin: 3px 0 0 10px;
+  border: none;
+  background:  #3B3C3D;
+  width: 25px;
+  height: 25px;
+  float: left;
+}
+.add-lots a{
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+}
+.add-lots:hover a{
+  color: #CC1F07;
+}
+.add-lots:hover{
+  background-color: #E9F3F1;
+}
+.top-title{
+  margin-top: 5px;
+  width:100%;
+  height: 35px;
+}
+.adder{
+  font-size: 24px;
+  margin: 0 0 0 5px;
+  text-decoration: none;
+  font-weight: 500;
+  color:#1ABC9C;
+  float:left;
+}
+.offer{
+  font-size: 24px;
+  margin: 0 0 0 5px;
+  text-decoration: none;
+  font-weight: 500;
+  color:#A6ACAF;
+}
+.name{
+  margin-right: 20px;
+  float: right;
+  font-size: 24px;
+  font-weight: 500;
+  color:#797D7F;
+}
+/* КНОПКИ В MY BIDS
+-----------------------------------------------------------------------------*/
+.bidder{
+  margin: 3px 0 0 10px;
+  border: none;
+  background:  #3B3C3D;
+  width: 25px;
+  height: 25px;
+  float: left;
+}
+.bidder a{
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+.bidder:hover a{
+  color: #CC1F07;
+}
+.bidder:hover{
+  background-color: #E9F3F1;
+}
+
+
+

@@ -1,0 +1,15 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+
+{% block content %}
+<div id="content" class="container">
+    <h2>{{ title }}</h2>
+    <hr>
+    <h5 style="color: {{ color_x }}">
+        {{ report_x }}
+    </h5>
+    <hr>
+</div>
+{% endblock content %}

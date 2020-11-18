@@ -1,0 +1,21 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+
+  <div>
+    <button type="submit">Edit  profile</button>
+    <t class="name">{{user.username}}'s Profile</t>
+  </div>
+  <hr>
+  <form method="post">
+  {% csrf_token %}
+  {{ profile_form.as_p }}
+    <p>{{ user.username }}</p>
+    <p>{{ user.email }}</p>
+    <button type="submit">Change Password</button>
+    <button type="submit">Save changes</button>
+  </form>
+
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+<div>
+    <h2>{{ title }}</h2>
+    <hr>
+    <div style="text-align: left" class="form-container">
+        <form method="post" action="/lots/edit/{{ post.id }}">
+            {% csrf_token %}
+            <div class="form">
+                {% for field in form %}
+                    <div class="form-group">
+                        {{ field.label_tag }}
+                        <div class="fields">
+                            {{ field }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <p style="margin-top: 20px" class="senders">
+                <button type="submit" class="sender">Save</button>
+                <button type="reset" class="sender">Clear</button>
+            </p>
+        </form>
+    </div>
+    <a href="/lots">Back to my lots</a>
+    <hr>
+</div>
+{% endblock content %}

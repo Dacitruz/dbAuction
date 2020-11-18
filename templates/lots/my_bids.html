@@ -1,0 +1,93 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}{{ title }}{% endblock title%}
+
+{% block content %}
+<div>
+    <div class="top-title">
+        {% if user.is_authenticated %}
+            <button class="add-lots" title="Add lots">
+                <a href="/lots/create">&#43;</a>
+            </button>
+            <a href="/lots/create" class="adder">Add lots</a>
+            <button class="bidder" title="My Bids">
+                <a href="/lots/index">&#x1F503;</a>
+            </button>
+            <a href="/lots/index" class="adder">To My Lots</a>
+            <t class="name">{{user.username}}'s Bids</t>
+        {% else %}
+        <t class="name"><a href="/accounts/sign_up" style="text-decoration: none;">You need to have account for creating lots</a></t>
+        {% endif %}
+    </div>
+    <hr>
+    <div class="lots">
+        {% for post in posts %}
+        {% if post.life_cycle == 'EX'%}
+            <div class="display-lot">
+                <div class="first">
+                    <img src="/media/{{ post.image }}" alt="lol">
+                </div>
+                <div class="lot-info">
+                    <p class="title">{{ post.title }} - Condition: ({{ post.condition }})</p>
+                    <p class="sub-title">Set: {{ post.set }}</p>
+                    <em class="author"> Author: {{ post.author }}</em>
+                    <p class="timings"> Started: {{ post.place_date }}</p>
+                    <p class="timings"> Bid ends: {{ post.finish_date }}</p>
+                </div>
+                <div class="slash"></div>
+                <div class="bid-info">
+                    <p class="title">Current Price: {{post.min_price }}</p>
+                    <p class="sub-title"></p>
+                </div>
+                <div class="commands">
+                    <button class="cube" onclick="/lots/remove/{{ post.id }}">
+                        <a href="/lots/remove/{{ post.id }}" title="Remove">&#10060;</a>
+                    </button>
+                    <button class="cube">
+                        <a href="/lots/check/{{ post.id }}" title="Details">&#128270;</a>
+                    </button>
+                     <button class="cube">
+                        <a href="/lots/edit/{{ post.id }}" title="Edit">&#9999;</a>
+                    </button>
+                    <button class="cube">
+                        <a href="/lots/?/{{ post.id }}" title="Promote">&#128176;</a>
+                    </button>
+                </div>
+            </div>
+        {% else %}
+            <div class="display-lot">
+                <div class="first">
+                    <img src="/media/{{ post.image }}" alt="lol">
+                </div>
+                <div class="lot-info">
+                    <p class="title">{{ post.title }} - Condition: ({{ post.condition }})</p>
+                    <p class="sub-title">Set: {{ post.set }}</p>
+                    <em class="author"> Author: {{ post.author }}</em>
+                    <p class="timings"> Started: {{ post.place_date }}</p>
+                    <p class="timings"> ENDED: {{ post.finish_date }}</p>
+                </div>
+                <div class="slash"></div>
+                <div class="bid-info">
+                    <p class="title">FINAL PRICE: {{post.min_price }}</p>
+                    <p class="sub-title"></p>
+                </div>
+                <div class="commands">
+                    <button class="cube" onclick="/lots/remove/{{ post.id }}">
+                        <a href="/lots/remove/{{ post.id }}" title="Remove">&#10060;</a>
+                    </button>
+                    <button class="cube">
+                        <a href="/lots/check/{{ post.id }}" title="Details">&#128270;</a>
+                    </button>
+                     <button class="cube">
+                        <a href="/lots/edit/{{ post.id }}" title="Edit">&#9999;</a>
+                    </button>
+                    <button class="cube">
+                        <a href="/lots/?/{{ post.id }}" title="Promote">&#128176;</a>
+                    </button>
+                </div>
+            </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body, html {
+    width: 100%;
+    min-width: 1000px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jaldi', sans-serif;
+    font-size: 18px;
+    background: #ECF0F1 ;
+}
+.wrapper {
+	margin: 5% 10% 0 10%;
+	width: 80%;
+	min-width: 1000px;
+	min-height: 100%;
+	height: auto;
+	height: 100%;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header{
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index:1;
+}
+
+/* Content
+-----------------------------------------------------------------------------*/
+.content{
+    background: #fff;
+    float: left;
+    width: 75%;
+    height: 2000px;
+
+
+}
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar{
+    background: #D5DBDB;
+    float: left;
+    width: 25%;
+    height: 2000px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+/* Clear
+-----------------------------------------------------------------------------*/
+.clear {
+    clear: both;
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer{
+
+
+}
+
+
+#top {
+  bottom: 2px;
+  cursor: pointer;
+  display: none;
+  font-size: 150%;
+  position: fixed;
+  right: 13px;
+  color:white;
+}
+
+/* Content FOR PAGE MY LOTS
+-----------------------------------------------------------------------------*/
+.content-check{
+  width:100%;
+  background: #ECF0F1 ;
+  float: left;
+  height: 2000px;
+}

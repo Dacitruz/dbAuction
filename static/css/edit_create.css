@@ -1,0 +1,40 @@
+.form-container{
+  width:100%
+}
+.fields{
+  margin-left: 25px;
+}
+.form-group input {
+  width: 50%;
+  height: 30px;
+  border-width: 1px;
+  border-radius: 10px;
+}
+.form-group textarea {
+  width: 50%;
+  border-width: 1px;
+  border-radius: 10px;
+  resize: none;
+}
+#b1, #b2 {
+  width: 150px;
+}
+.form{
+  background-color: #FDFEFE;
+}
+.senders{
+  margin-left: 220px;
+}
+.sender{
+  width:80px;
+  height: 40px;
+  margin: 10px;
+  border: none;
+  background:  #3B3C3D;
+  color: white;
+  font-size: 18px;
+}
+.sender:hover{
+  background-color: #E9F3F1;
+  color: #CC1F07;
+}

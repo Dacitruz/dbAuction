@@ -1,0 +1,92 @@
+.top-title{
+  width:100%
+}
+.lots {
+  width: 100%;
+}
+.display-lot{
+  width: 95%;
+  background: #FDFEFE;
+  margin: 5px 0 0 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color:  #D0D3D4;
+  display:flex;
+  padding: 5px;
+}
+.display-lot:hover{
+  border-color: #F2F3F4 ;
+  border-width: 1px;
+}
+.first {
+  width: 15%;
+  float: left;
+}
+.title{
+  text-decoration: none;
+  color: #17202A  ;
+  font-weight: 800;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.sub-title{
+  text-decoration: none;
+  color: #17202A  ;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 5%;
+}
+.timings{
+  text-decoration: none;
+  color: #3A9356;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 5%;
+}
+.author{
+  margin-left: 5%;
+}
+.first img{
+  display: block;
+  width: 100%;
+}
+.lot-info{
+  width: 45%;
+  float: left;
+}
+.slash{
+  height:190px;
+  border-left:1px
+  solid #C5D2E4;
+  float:right;
+  margin-top:4px;
+  margin-right: 1px;
+}
+.bid-info{
+  width: 28%;
+  float: left;
+}
+.commands{
+  width:10%
+  float: left;
+}
+.cube{
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin: 5px;
+  border: none;
+  background:  #3B3C3D;
+}
+.cube a{
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+}
+.cube:hover{
+  background-color: #E9F3F1;
+}
+.cube:hover a{
+  color: #CC1F07;
+}

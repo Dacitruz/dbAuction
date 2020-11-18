@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Web Auction">
+    <meta name="author" content="Dacenko Denis">
+    <title>CardTrash {% block title %}{% endblock title %}</title>
+    <!-- Favicons -->
+    <link rel="icon" href="{% static 'icons/favicon.png' %}">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lots_headers.css' %}">
+    <link rel="stylesheet" href="{% static 'css/user_lots.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auction_lots.css' %}">
+    <link rel="stylesheet" href="{% static 'css/edit_create.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/check.css' %}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+            {% include 'layout/slidebar.html' %}
+            {% include 'layout/nav.html' %}
+    </header>
+    <div class="wrapper">
+        <div class="left-sidebar">Sidebar</div>
+        <div class="content">
+            {% block content %}{% endblock content %}
+        </div>
+
+        <footer class="footer">
+            {% include 'layout/footer.html' %}
+        </footer><!-- .footer -->
+    </div><!-- .wrapper -->
+
+
+    <div id="top"><img src="\static\icons\backtt.png" width="60" height="55" alt="backtotop"></div>
+    <input type="hidden" value="mata-inactive-38.png" id="mata-icon-name">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="\static\js\jquery-3.3.1.min.js"></script>
+    <script src="\static\js\all.js"></script>
+</body>

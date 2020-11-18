@@ -1,1 +1,1 @@
-web: gunicorn Mtg_auction_master.wsgi
+web: gunicorn cardtrash.wsgi

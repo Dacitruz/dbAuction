@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Auction.urls'
+ROOT_URLCONF = 'Mtg_auction_master.urls'
 
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
@@ -73,16 +73,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Auction.wsgi.application'
-# Channels
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
-        },
-    },
-}
-
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

@@ -1,1 +1,1 @@
-web: gunicorn mtgauction.wsgi
+web: gunicorn Auction.wsgi
